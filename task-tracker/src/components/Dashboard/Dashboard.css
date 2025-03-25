@@ -1,0 +1,51 @@
+.dashboard {
+    background-color: var(--background-color);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 30px;
+    gap: 20px;
+    height: 100%;
+    
+}
+
+.dashboard__head{
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--dark-blue-color);
+}
+.dashboard__main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Кнопка в правом нижнем углу */
+.floating-btn {
+  position: fixed; /* Кнопка всегда на экране */
+  bottom: 20px; /* Отступ от нижнего края */
+  right: 20px; /* Отступ от правого края */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4caf50;
+  color: white;
+  font-size: 24px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+  
+  .floating-btn:hover {
+    background-color: #45a049; /* Темнее при наведении */
+  }
+  

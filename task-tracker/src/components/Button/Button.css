@@ -1,0 +1,30 @@
+.btn {
+    background-color: var(--dark-blue-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .btn:hover {
+    /* background-color: #0056b3; */
+  }
+  
+  .btn-primary{
+    background-color: var(--dark-blue-color);
+    /* color: var(--primary-text-color); */
+    color: #fff;
+  }
+
+  .btn-secondary{
+    background-color: var(--highlight-backgroung-color);
+    color: var(--second-text-color);
+  }

@@ -1,0 +1,61 @@
+.sidebar {
+    min-width: 254px;
+    height: 100%;
+    background: var(--header-background-color);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+.sidebar__part{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.sidebar__part-title{
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  border-radius: 10px;
+  padding: 0px 5px 0px 10px;
+  height: 36px;
+}
+.sidebar__part-title:hover {
+  background-color: var(--highlight-backgroung-color);
+}
+.sidebar__part-title .icon {
+  opacity: 0; /* Изначально иконки скрыты */
+  transition: opacity 0.1s ease;
+}
+
+.sidebar__part-title:hover .icon {
+  opacity: 1; /* Иконки становятся видимыми при наведении */
+}
+
+.sidebar__part-title .chevron {
+  transition: transform 0.3s ease;
+}
+
+.sidebar__part-title.open .chevron {
+  transform: rotate(90deg); /* Поворот стрелки при открытии */
+}
+
+
+/* Для анимации списка */
+.sidebar__part-title + div {
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  max-height: 1000px;
+}
+
+.sidebar__part-title + div.collapsed {
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.icon{
+  cursor: pointer;
+}
