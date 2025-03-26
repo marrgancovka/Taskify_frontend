@@ -1,62 +1,71 @@
-.task-form{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    background-color: rgba(1,1,1,0.3);
-    align-items: center;
-    padding: 80px 300px;
-    position: fixed;
-}
-
-.task-form__main{
+.task-form {  
+    position: fixed;  
+    top: 0;  
+    right: 0;  
+    width: 400px;  
+    height: 100%;  
+    /* background-color: var(--dark-blue-color-10);   */
     background-color: var(--background-color);
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    overflow: hidden;
+    padding: 20px;  
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);  
+    transition: transform 0.3s ease;  
+    z-index: 1000;  
     display: flex;
     flex-direction: column;
-}
-.task-form__head{
-    display: flex;
-    flex-direction: row;
-    height: 40px;
-    border-bottom: 1px solid var(--header-background-color);
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 10px;
-}
-.task-form__content{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-
-}
-.task-form__left{
-    display: flex;
-    flex-direction: column;
-    flex: 2;
-    background-color: var(--background-color);
-    width: 100%;
-    height: 100%;
-    padding: 20px 30px;
-}
-.task-form__right{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    background-color: var(--light-background-color);
-    width: 100%;
-    height: 100%;
-    padding: 20px 10px;
     gap: 10px;
-}
+  }  
+  
+  .task-form__info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .task-form__choice{
+    margin: 5px 0px;
+    border-bottom: 1px solid var(--highlight-backgroung-color);
+    display: flex;
+    flex-direction: row;
+  }
+  .task-form__choice h4 {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .active-part {
+    border-bottom: 2px solid var(--dark-blue-color);
+  }
 
-.task-form__title{
+  .task-form__block-comment{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
 
-}
-.task-form__active{
-  margin-top: 30px;
-  border-top: 1px solid var(--header-background-color);
-}
+  .task-form__property{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .task-form__comments{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    flex-grow: 1;
+    overflow-y: auto;
+    min-height: 0;
+  }
+  
+  .task-form__enter {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    min-width: 0;
+  }
+  
+
+  
+  .task-form__enter > :last-child {
+    flex: 1;
+  }
+  

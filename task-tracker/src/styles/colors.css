@@ -7,7 +7,7 @@
     --light-background-color: #EBEBEB;
     --background-color: #fff;
 
-    --dark-blue-color: #007AFF;
+    --dark-blue-color: rgb(0, 122, 255);
     --light-blue-color: #51AAF2;
     --green-color: #19C759;
     --yellow-color: #FFCC08;
@@ -19,5 +19,7 @@
     --brown-color: #9D8563;
     --grey-color: #5B6770;
     --light-brown-color: #D9A69E;
+    --dark-blue-color-10: rgb(0, 122, 255, 0.1);
+    --dark-blue-color-20: rgb(0, 122, 255, 0.2);
   }
   

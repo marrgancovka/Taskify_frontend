@@ -3,8 +3,11 @@ import List from "../List/List";
 import { useState } from "react";
 import chevron from "../../assets/icons/chevron_right_24dp_1F1F1F_FILL0_wght200_GRAD0_opsz24.svg";
 import add from "../../assets/icons/add_24dp_1F1F1F_FILL0_wght200_GRAD0_opsz24.svg";
+import { useNavigate } from "react-router-dom";
 
-const Sidebar = ({ data, msg }) => {
+const Sidebar = ({ data, msg, openBoardModal }) => {
+  const navigate = useNavigate();
+
   const myItems = data.filter(item => item.categories?.includes("мое"));
   const commonItems = data.filter(item => item.categories?.includes("общее"));
   const favoriteItems = data.filter(item => item.categories?.includes("избранное"));
@@ -16,6 +19,10 @@ const Sidebar = ({ data, msg }) => {
   const toggleMyList = () => setIsMyOpen(!isMyOpen);
   const toggleCommonList = () => setIsCommonOpen(!isCommonOpen);
   const toggleFavoriteList = () => setIsFavoriteOpen(!isFavoriteOpen);
+
+  const handleItemClick = (id) => {
+    navigate(`/board/${id}`);
+  };
 
   return (
     <div className="sidebar">
@@ -32,7 +39,7 @@ const Sidebar = ({ data, msg }) => {
             </div>
           </div>
           <div className={isFavoriteOpen ? "" : "collapsed"}>
-            {isFavoriteOpen && <List items={favoriteItems} />}
+            {isFavoriteOpen && <List items={favoriteItems} onClick={handleItemClick}/>}
           </div>
         </div>
       )}
@@ -42,13 +49,13 @@ const Sidebar = ({ data, msg }) => {
         <div className="sidebar__part">
           <div className={`sidebar__part-title ${isMyOpen ? "open" : ""}`} >
             <h3 style={{ flexGrow: 1 }}>Мои списки</h3>
-            <div className="icon add"><img src={add} alt="add" /></div>
+            <div className="icon add" onClick={()=>{openBoardModal(true)}}><img src={add} alt="add" /></div>
             <div className="icon chevron" onClick={toggleMyList}>
               <img src={chevron} alt="chevron" />
             </div>
           </div>
           <div className={isMyOpen ? "" : "collapsed"}>
-            {isMyOpen && <List items={myItems} />}
+            {isMyOpen && <List items={myItems} onClick={handleItemClick}/>}
           </div>
         </div>
       )}
@@ -58,13 +65,13 @@ const Sidebar = ({ data, msg }) => {
         <div className="sidebar__part">
           <div className={`sidebar__part-title ${isCommonOpen ? "open" : ""}`} >
             <h3 style={{ flexGrow: 1 }}>Общие списки</h3>
-            <div className="icon add"><img src={add} alt="add" /></div>
+            <div className="icon add" onClick={openBoardModal}><img src={add} alt="add" /></div>
             <div className="icon chevron" onClick={toggleCommonList}>
               <img src={chevron} alt="chevron" />
             </div>
           </div>
           <div className={isCommonOpen ? "" : "collapsed"}>
-            {isCommonOpen && <List items={commonItems} />}
+            {isCommonOpen && <List items={commonItems} onClick={handleItemClick}/>}
           </div>
         </div>
       )}

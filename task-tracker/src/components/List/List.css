@@ -17,7 +17,8 @@
     transition: background-color 0.3s;
   }
   
-  .list:hover {
+  .list:hover,
+  .list.active {
     background-color: var(--highlight-backgroung-color);
   }
   

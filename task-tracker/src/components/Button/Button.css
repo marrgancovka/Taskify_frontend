@@ -2,16 +2,18 @@
     background-color: var(--dark-blue-color);
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 5px 20px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 10px;
     transition: background-color 0.3s;
     display: flex;
+    flex-direction: row;
     align-items: center;
     font-weight: 500;
     justify-content: center;
     width: 100%;
+    gap: 5px;
   }
   
   .btn:hover {
@@ -27,4 +29,23 @@
   .btn-secondary{
     background-color: var(--highlight-backgroung-color);
     color: var(--second-text-color);
+  }
+
+  .btn-white{
+    background-color: var(--backgroung-color);
+    color: var(--dark-blue-color)
+  }
+
+  .btn-regular{
+    font-weight: 400;
+    font-size: 14px;
+  }
+  
+  .btn img {
+    height: 20px;
+    width: 20px;
+  }
+
+  .btn-left{
+    justify-content: flex-start;
   }

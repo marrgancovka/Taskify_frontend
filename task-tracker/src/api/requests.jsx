@@ -14,3 +14,8 @@ export const getMyLists = async () => {
     const response = await api.get('/board');
     return response.data;
 }
+
+export const getTasksList = async (id) => {
+  const response = await api.get(`/board/${id}/tasks`);
+  return response.data;
+}

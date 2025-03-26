@@ -1,0 +1,39 @@
+.new-task {
+    border-radius: 10px;
+    border: 1px solid var(--highlight-backgroung-color);
+    width: 100%;
+    min-height: 40px;
+    padding: 5px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.new-task__property {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap; /* Чтобы элементы переносились, если не влезают */
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--highlight-backgroung-color);
+}
+
+.new-task__property .my-input {
+    width: auto; /* Размер по содержимому */
+    flex-shrink: 0; /* Запрет на сжатие */
+}
+
+.new-task__bottom{
+    padding: 10px 0px 5px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.new-task__buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.new-task__bottom .my-input {
+    width: auto; /* Размер по содержимому */
+    flex-shrink: 0; /* Запрет на сжатие */
+}

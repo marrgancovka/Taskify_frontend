@@ -1,0 +1,29 @@
+.comment{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.comment__user{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+.comment__user h4 {
+    color: var(--primary-text-color);
+}
+.comment__content{
+    padding-left: 25px;
+    font-size: 14px;
+}
+.comment__avatar{
+    background-color: var(--pink-color);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
